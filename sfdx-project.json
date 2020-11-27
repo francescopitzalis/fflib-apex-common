@@ -2,7 +2,10 @@
     "packageDirectories": [
         {
             "path": "sfdx-source/apex-common",
-            "default": true
+            "default": true,
+            "package": "fflib-apex-common",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
     "dependencies": [
@@ -14,6 +17,7 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "48.0",
     "packageAliases": {
-        "fflib-apex-mocks@0.1.0-1": "04t4V000001qUjhQAE"
+        "fflib-apex-mocks@0.1.0-1": "04t4V000001qUjhQAE",
+        "fflib-apex-common": "0Ho4V000000XZEZSA4"
     }
 }
