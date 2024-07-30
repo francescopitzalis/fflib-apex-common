@@ -1,6 +1,7 @@
 {
     "orgName": "apex-common",
     "edition": "Developer",
+    "language": "en_US",
     "features": [
         "MultiCurrency"
     ],
