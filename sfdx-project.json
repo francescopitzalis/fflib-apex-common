@@ -10,13 +10,21 @@
       "path": "sfdx-source",
       "default": false,
       "package": "Apex Common",
-      "versionDescription": ""
+      "versionDescription": "",
+      "dependencies": [
+        {
+          "package": "Apex Mocks",
+          "versionNumber": "1.0.0.LATEST"
+        }
+      ]
     }
   ],
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "63.0",
   "packageAliases": {
-    "Apex Common": "0HoSW00000000mP0AQ"
+    "Apex Mocks": "0HoSW00000000kn0AA",
+    "Apex Common": "0HoSW00000000mP0AQ",
+    "Apex Common@1.0.0-1": "04tSW0000000XC5YAM"
   }
 }
