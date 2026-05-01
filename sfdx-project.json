@@ -3,9 +3,20 @@
     {
       "path": "sfdx-source/apex-common",
       "default": true
+    },
+    {
+      "versionName": "2026-05-01 1.0",
+      "versionNumber": "1.0.0.NEXT",
+      "path": "sfdx-source",
+      "default": false,
+      "package": "Apex Common",
+      "versionDescription": ""
     }
   ],
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "63.0"
+  "sourceApiVersion": "63.0",
+  "packageAliases": {
+    "Apex Common": "0HoSW00000000mP0AQ"
+  }
 }
