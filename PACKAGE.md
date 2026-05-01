@@ -23,6 +23,19 @@ org will be authorized as a dev hub and set as the default dev hub.
 ```sh
 sf package create --name "Apex Common" --package-type Unlocked --path sfdx-source
 ```
+- Add the Apex Mocks package as a dependency by adding the following to the new package section of the sfdx-project.json file, after `versionDescription`, e.g.:
+```json
+"dependencies": [
+  {
+    "package": "Apex Mocks",
+    "versionNumber": "1.0.0.LATEST"
+  }
+]
+```
+- In the `packageAliases` section of the sfdx-project.json file, add the alias for the Apex Mocks dependency, e.g.:
+```json
+"Apex Mocks": "0Ho..."
+```
 
 ## Create a new version of the package
 - Open the sfdx-project.json file and update the `versionName` and optionally the `versionNumber` of the package.
