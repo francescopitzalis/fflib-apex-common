@@ -5,7 +5,7 @@
       "default": true
     },
     {
-      "versionName": "ver 0.1",
+      "versionName": "2026-05-27",
       "versionNumber": "0.1.0.NEXT",
       "path": "sfdx-source",
       "default": false,
@@ -24,6 +24,7 @@
   "sourceApiVersion": "63.0",
   "packageAliases": {
     "Apex Mocks": "0HoSW00000000pd0AA",
-    "Apex Common": "0HoSW00000000rF0AQ"
+    "Apex Common": "0HoSW00000000rF0AQ",
+    "Apex Common@0.1.0-1": "04tSW0000000Z5pYAE"
   }
 }
