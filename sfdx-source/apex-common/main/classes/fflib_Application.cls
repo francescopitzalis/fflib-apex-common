@@ -30,6 +30,7 @@
  *   See the sample applications Application.cls file for an example
  **/
 @NamespaceAccessible
+@SuppressWarnings('PMD.EmptyStatementBlock, PMD.CognitiveComplexity, PMD.ClassNamingConventions, PMD.FieldNamingConventions, PMD.ApexDoc')
 public virtual class fflib_Application
 {
 	/**

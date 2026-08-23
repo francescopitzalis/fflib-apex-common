@@ -29,6 +29,7 @@
  * user does not have the proper security granted.
  **/
 @NamespaceAccessible
+@SuppressWarnings('PMD.ClassNamingConventions, PMD.MethodNamingConventions, PMD.FieldNamingConventions, PMD.PropertyNamingConventions, PMD.ApexDoc, PMD.CyclomaticComplexity, PMD.CognitiveComplexity, PMD.FieldDeclarationsShouldBeAtStart')
 public class fflib_SecurityUtils  
 {
     @TestVisible
