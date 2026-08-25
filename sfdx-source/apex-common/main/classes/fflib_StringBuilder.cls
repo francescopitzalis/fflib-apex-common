@@ -29,18 +29,22 @@
  * 
  * NOTE: Aspects of this were developed before recent improvements to String handling, as such could likely be enhanced at this stage.
  **/
+@NamespaceAccessible
 public virtual class fflib_StringBuilder
 {
+	@NamespaceAccessible
 	protected List<String> buffer = new List<String>();
 	
 	/**
 	 * Construct an empty StringBuilder
 	 **/
+	@NamespaceAccessible
 	public fflib_StringBuilder() {}
 	
 	/**
 	 * Construct a StringBuilder with the given values
 	 **/
+	@NamespaceAccessible
 	public fflib_StringBuilder(List<String> values)
 	{
 		add(values);
@@ -49,6 +53,7 @@ public virtual class fflib_StringBuilder
 	/**
 	 * Add the given values to the StringBuilder
 	 **/
+	@NamespaceAccessible
 	public virtual void add(List<String> values)
 	{
 		buffer.addAll(values);
@@ -57,11 +62,13 @@ public virtual class fflib_StringBuilder
 	/**
 	 * Add the given value to the StringBuilder
 	 **/
+	@NamespaceAccessible
 	public virtual void add(String value)
 	{
 		buffer.add(value);
 	}
 	
+	@NamespaceAccessible
 	public virtual override String toString()
 	{
 		return String.join(buffer, '');
@@ -70,6 +77,7 @@ public virtual class fflib_StringBuilder
 	/**
 	 * Return the state of the StringBuilder
 	 **/
+	@NamespaceAccessible
 	public virtual String getStringValue()
 	{
 		return toString();
@@ -78,34 +86,41 @@ public virtual class fflib_StringBuilder
 	/**
 	 * Subclasses the StringBuilder to produce a comma delimited concatenation of strings
 	 **/
+	@NamespaceAccessible
 	public virtual with sharing class CommaDelimitedListBuilder extends fflib_StringBuilder
 	{
 		String itemPrefix = '';
 		String delimiter = ',';
 		
+		@NamespaceAccessible
 		public CommaDelimitedListBuilder() {}
 
+		@NamespaceAccessible
 		public CommaDelimitedListBuilder(List<String> values)
 		{
 			super(values);
 		}
 		
+		@NamespaceAccessible
 		public void setItemPrefix(String itemPrefix)
 		{
 			this.itemPrefix = itemPrefix;
 		}
 		
+		@NamespaceAccessible
 		public void setDelimiter(String delimiter)
 		{
 			this.delimiter = delimiter;
 		}
 		
+		@NamespaceAccessible
 		public String getStringValue(String itemPrefix)
 		{
 			setItemPrefix(itemPrefix);
 			return toString();
 		}
 		
+		@NamespaceAccessible
 		public override String toString()
 		{
 			return itemPrefix + String.join(buffer, delimiter + itemPrefix);
@@ -115,13 +130,16 @@ public virtual class fflib_StringBuilder
 	/** 
 	 * Subclasses the StringCommaDelimitedBuilder to accept native SObjectField tokens and optional FieldSet definitions to concatinate when building queries
 	 **/
+	@NamespaceAccessible
 	public virtual with sharing class FieldListBuilder extends CommaDelimitedListBuilder
 	{
+		@NamespaceAccessible
 		public FieldListBuilder(List<Schema.SObjectField> values)
 		{
 			this(values, null);
 		}
 		
+		@NamespaceAccessible
 		public FieldListBuilder(List<Schema.SObjectField> values, List<Schema.FieldSet> fieldSets)
 		{
 			// Create a distinct set of fields (or field paths) to select
@@ -138,13 +156,16 @@ public virtual class fflib_StringBuilder
 	/**
 	 * Subclasses the FieldListBuilder to auto sense and include when needed the CurrencyIsoCode field in the field list
 	 **/
+	@NamespaceAccessible
 	public with sharing class MultiCurrencyFieldListBuilder extends FieldListBuilder
 	{
+		@NamespaceAccessible
 		public MultiCurrencyFieldListBuilder(List<Schema.SObjectField> values)
 		{
 			this(values, null);
 		}
 		
+		@NamespaceAccessible
 		public MultiCurrencyFieldListBuilder(List<Schema.SObjectField> values, List<Schema.FieldSet> fieldSets)
 		{
 			super(values, fieldSets);
