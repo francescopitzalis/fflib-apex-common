@@ -25,6 +25,7 @@
 **/
 
 @NamespaceAccessible
+@SuppressWarnings('PMD.ApexDoc, PMD.ClassNamingConventions')
 public interface fflib_ISObjectDomain extends fflib_IDomain
 {
     /**

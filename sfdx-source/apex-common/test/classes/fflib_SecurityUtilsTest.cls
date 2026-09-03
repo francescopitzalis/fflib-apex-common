@@ -25,6 +25,7 @@
 **/
 
 @isTest @TestVisible
+@SuppressWarnings('PMD.ClassNamingConventions, PMD.MethodNamingConventions, PMD.ExcessiveParameterList')
 private class fflib_SecurityUtilsTest {
 
 	@TestSetup @TestVisible

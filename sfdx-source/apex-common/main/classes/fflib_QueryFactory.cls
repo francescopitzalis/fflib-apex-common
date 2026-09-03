@@ -52,6 +52,7 @@
  * https://docs.google.com/a/financialforce.com/document/d/1I4cxN4xHT4UJj_3Oi0YBL_MJ5chm-KG8kMN1D1un8-g/edit?usp=sharing
 **/
 @NamespaceAccessible
+@SuppressWarnings('PMD.CognitiveComplexity, PMD.CyclomaticComplexity, PMD.ExcessivePublicCount, PMD.AvoidBooleanMethodParameters, PMD.ExcessiveParameterList, PMD.ClassNamingConventions, PMD.MethodNamingConventions, PMD.FieldNamingConventions, PMD.PropertyNamingConventions, PMD.FieldDeclarationsShouldBeAtStart, PMD.LocalVariableNamingConventions, PMD.ApexDoc, PMD.StdCyclomaticComplexity, PMD.NcssMethodCount, PMD.ExcessiveClassLength')
 public class fflib_QueryFactory { //No explicit sharing declaration - inherit from caller
 	@NamespaceAccessible
 	public enum SortOrder {ASCENDING, DESCENDING}
@@ -462,6 +463,7 @@ public class fflib_QueryFactory { //No explicit sharing declaration - inherit fr
 	 * @param related The related object type
 	**/
 	@NamespaceAccessible
+	@SuppressWarnings('PMD.AvoidDebugStatements')
 	public fflib_QueryFactory subselectQuery(SObjectType related){ 
 		System.debug(LoggingLevel.WARN, 'fflib_QueryFactory.subselectQuery(Schema.SObjectType) is deprecated and will be removed in a future release. Use fflib_QueryFactory.subselectQuery(String) or fflib_QueryFactory.subselectQuery(ChildRelationship) instead.');
 		return setSubselectQuery(getChildRelationship(related), false);
@@ -476,6 +478,7 @@ public class fflib_QueryFactory { //No explicit sharing declaration - inherit fr
 	 * @param assertIsAccessible indicates whether to check if the user has access to the subquery object
 	**/
 	@NamespaceAccessible
+	@SuppressWarnings('PMD.AvoidDebugStatements')
 	public fflib_QueryFactory subselectQuery(SObjectType related, Boolean assertIsAccessible){
 		System.debug(LoggingLevel.WARN, 'fflib_QueryFactory.subselectQuery(Schema.SObjectType, Boolean) is deprecated and will be removed in a future release. Use fflib_QueryFactory.subselectQuery(String, Boolean) or fflib_QueryFactory.subselectQuery(ChildRelationship, Boolean) instead.'); 
 		return setSubselectQuery(getChildRelationship(related), assertIsAccessible);

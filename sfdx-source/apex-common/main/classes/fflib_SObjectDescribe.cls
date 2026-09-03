@@ -37,6 +37,7 @@
  * namespace detection logic encapsulated.
 **/
 @NamespaceAccessible
+@SuppressWarnings('PMD.ApexDoc, PMD.ClassNamingConventions, PMD.AvoidBooleanMethodParameters, PMD.CognitiveComplexity')
 public class fflib_SObjectDescribe {
 	//internal implementation details
 	private Schema.SObjectType token;
