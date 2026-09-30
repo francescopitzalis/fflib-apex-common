@@ -3,9 +3,28 @@
     {
       "path": "sfdx-source/apex-common",
       "default": true
+    },
+    {
+      "versionName": "2026-09-24",
+      "versionNumber": "1.0.0.NEXT",
+      "path": "sfdx-source",
+      "default": false,
+      "package": "Apex Common",
+      "versionDescription": "",
+      "dependencies": [
+        {
+          "package": "Apex Mocks",
+          "versionNumber": "1.0.0.LATEST"
+        }
+      ]
     }
   ],
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "63.0"
+  "sourceApiVersion": "63.0",
+  "packageAliases": {
+    "Apex Mocks": "0HoSX0000009Qcn0AE",
+    "Apex Common": "0HoSX0000009QeP0AU",
+    "Apex Common@1.0.0-1": "04tSX00000Ce5mrYAB"
+  }
 }
